@@ -16,10 +16,10 @@ const Login = () => {
       <h1>로그인</h1>
       <p>로그인 페이지입니다.</p>
       <div>
-        <input type="text" onChange={handleUserId} />
+        <input type="text" value={userId} onChange={handleUserId} />
       </div>
       <div>
-        <input type="password" onChange={handlePassword} />
+        <input type="password" value={password} onChange={handlePassword} />
       </div>
     </div>
   );
