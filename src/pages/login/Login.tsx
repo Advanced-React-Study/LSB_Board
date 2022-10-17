@@ -4,8 +4,10 @@ import LoginWrapper from "./LoginWrapper";
 import InputWrapper from "../../components/InputWrapper";
 import Button from "../../components/Button";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,11 +19,19 @@ const Login = () => {
   };
 
   const onClickLogin = () => {
-    axios.post("http://43.201.8.111:3001/user/login", {
-      id: userId,
-      password: password,
-    });
-    alert("Login successfully");
+    axios
+      .post("http://43.201.8.111:3001/user/login", {
+        id: userId,
+        password: password,
+      })
+      .then((response) => {
+        console.log(response.data);
+        alert("Login successfully");
+        navigate("../board");
+      })
+      .catch((e) => {
+        console.log("No");
+      });
   };
 
   return (
