@@ -23,7 +23,7 @@ const Register = () => {
   };
 
   const onClickRegister = () => {
-    axios.post("http://43.201.8.111:3001/user/register", {
+    axios.post("http://13.124.149.255:3001/user/register", {
       id: userId,
       password: password,
       name: nickname,

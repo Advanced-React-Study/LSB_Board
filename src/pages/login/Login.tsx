@@ -20,7 +20,7 @@ const Login = () => {
 
   const onClickLogin = () => {
     axios
-      .post("http://43.201.8.111:3001/user/login", {
+      .post("http://13.124.149.255:3001/user/login", {
         id: userId,
         password: password,
       })
@@ -31,6 +31,7 @@ const Login = () => {
       })
       .catch((e) => {
         console.log("No");
+        console.log(e);
       });
   };
 

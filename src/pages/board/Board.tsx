@@ -9,6 +9,7 @@ const Board = () => {
   return (
     <BoardWrapper>
       <h1>Board</h1>
+      <Button>글 쓰기</Button>
     </BoardWrapper>
   );
 };
